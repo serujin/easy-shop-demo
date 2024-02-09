@@ -1,0 +1,31 @@
+.navBar {
+  width: 52%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5%;
+}
+
+.navBar * {
+  color: #fbfafa;
+  display: flex;
+  align-items: center;
+}
+
+.navBarLeft {
+  width: 42%;
+}
+
+.navBarRight {
+  width: 18%;
+}
+
+.navigation {
+  width: 100%;
+  justify-content: center;
+}
+
+.navigationList {
+  width: 100%;
+  justify-content: space-around;
+}
