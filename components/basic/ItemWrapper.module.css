@@ -1,0 +1,26 @@
+.itemWrapperContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 25%;
+  width: 25%;
+}
+
+.itemContainer:hover {
+  background-color: #e8e8e8;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 6%;
+  text-align: center;
+  padding: 0.7vw 0.9vw;
+}
+
+.itemImage {
+  height: 100%;
+}
