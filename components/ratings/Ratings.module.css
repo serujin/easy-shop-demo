@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 52%;
+}
+
+.container * {
+  display: flex;
+}
+
+.titleContainer {
+  padding: 1%;
+}
+
+.reviewsContainer {
+  padding: 1%;
+}
