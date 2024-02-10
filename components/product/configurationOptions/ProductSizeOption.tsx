@@ -1,4 +1,5 @@
 import React, { ChangeEvent } from "react";
+import styles from "./ProductSizeOption.module.css";
 
 export type ProductSizeOptionType = {
   value: string;
@@ -19,8 +20,9 @@ export default function ProductSizeOption(props: ProductSizeOptionProps) {
   const { handleSizeChange, optionNumber, selectedSize, value } = props;
   const id = createId(optionNumber, value);
   return (
-    <li>
+    <li className={styles.productSizeOptionContainer}>
       <input
+        className={styles.productSizeOptionInput}
         type="radio"
         id={id}
         name="dimensions"
@@ -28,7 +30,9 @@ export default function ProductSizeOption(props: ProductSizeOptionProps) {
         checked={selectedSize === value}
         onChange={handleSizeChange}
       />
-      <label htmlFor={id}>{value}</label>
+      <label className={styles.productSizeOptionLabel} htmlFor={id}>
+        {value}
+      </label>
     </li>
   );
 }
