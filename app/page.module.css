@@ -10,9 +10,15 @@
   display: flex;
 }
 
-.ratingsContainer {
+.headerContainer {
   background-color: #f97805;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.ratingsContainer {
+  width: 52%;
   padding: 2% 0;
   justify-content: center;
   align-items: center;

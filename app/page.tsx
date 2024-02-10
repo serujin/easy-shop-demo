@@ -17,13 +17,15 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.ratingsContainer}>
-        <Ratings
-          title={"Custom stickers"}
-          titleStyle="huge"
-          rating={4.5}
-          reviews={20000}
-        />
+      <div className={styles.headerContainer}>
+        <div className={styles.ratingsContainer}>
+          <Ratings
+            title={"Custom stickers"}
+            titleStyle="huge"
+            rating={4.5}
+            reviews={20000}
+          />
+        </div>
       </div>
       <div className={styles.productsContainer}>
         {products.map(({ id, name }, index) => (
