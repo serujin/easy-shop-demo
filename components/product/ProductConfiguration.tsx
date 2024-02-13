@@ -36,31 +36,33 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
       <div>
         <Text text={"Select a size"} />
         <ul>
-          {sizeOptions.map(({ value }, index) => (
-            <ProductSizeOption
-              handleSizeChange={handleSizeChange}
-              key={index}
-              optionNumber={index}
-              selectedSize={selectedSize}
-              value={value}
-            />
-          ))}
+          {sizeOptions &&
+            sizeOptions.map(({ value }, index) => (
+              <ProductSizeOption
+                handleSizeChange={handleSizeChange}
+                key={index}
+                optionNumber={index}
+                selectedSize={selectedSize}
+                value={value}
+              />
+            ))}
         </ul>
       </div>
       <div>
         <Text text={"Select a quantity"} />
         <ul>
-          {quantityOptions.map(({ discount, price, value }, index) => (
-            <ProductQuantityOption
-              discount={discount}
-              handleQuantityChange={handleQuantityChange}
-              key={index}
-              optionNumber={index}
-              price={price}
-              selectedQuantity={selectedQuantity}
-              value={value}
-            />
-          ))}
+          {quantityOptions &&
+            quantityOptions.map(({ discount, price, value }, index) => (
+              <ProductQuantityOption
+                discount={discount}
+                handleQuantityChange={handleQuantityChange}
+                key={index}
+                optionNumber={index}
+                price={price}
+                selectedQuantity={selectedQuantity}
+                value={value}
+              />
+            ))}
         </ul>
       </div>
       <button type="submit">Continue</button>

@@ -9,7 +9,7 @@ interface StarDisplayProps {
 
 // TODO: display empty stars based on maxRating
 const getStars = (maxRating: number, rating: number) => {
-  const fullStars = Math.floor(rating);
+  const fullStars = rating ? Math.floor(rating) : 0;
   const shouldShowHalfStar = rating - fullStars >= 0.5;
   return { fullStars, shouldShowHalfStar };
 };

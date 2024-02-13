@@ -9,42 +9,25 @@ import { useEffect, useState } from "react";
 import { getProductInformationById } from "@/lib/products";
 
 type ProductInformation = {
-  id: string;
   description: string;
   name: string;
-  quantityOptions: Array<ProductQuantityOptionType>;
+  quantityOptions: ProductQuantityOptionType[];
   rating: number;
   reviews: number;
-  sizeOptions: Array<ProductSizeOptionType>;
+  sizeOptions: ProductSizeOptionType[];
 };
 
 export default function ProductPage() {
-  const [description, setDescription] = useState("");
-  const [name, setName] = useState("");
-  const [quantityOptions, setQuantityOptions] = useState([]);
-  const [rating, setRating] = useState(0);
-  const [reviews, setReviews] = useState(0);
-  const [sizeOptions, setSizeOptions] = useState([]);
+  const [productData, setProductData] = useState({} as ProductInformation);
 
   const productId = usePathname().split("/").at(-1);
 
+  const { description, name, quantityOptions, rating, reviews, sizeOptions } =
+    productData;
+
   useEffect(() => {
     getProductInformationById(productId ? productId : "").then(
-      ({
-        description,
-        name,
-        quantityOptions,
-        rating,
-        reviews,
-        sizeOptions,
-      }) => {
-        setDescription(description);
-        setName(name);
-        setQuantityOptions(quantityOptions);
-        setRating(rating);
-        setReviews(reviews);
-        setSizeOptions(sizeOptions);
-      }
+      (ProductInformation) => setProductData(ProductInformation)
     );
   }, [productId]);
 
