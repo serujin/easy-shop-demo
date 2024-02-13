@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Text from "./Text/Text";
 import Link from "next/link";
 import styles from "./ItemWrapper.module.css";
 
@@ -24,7 +23,7 @@ export default function ItemWrapper(props: ItemWrapperProps) {
             width={200}
             height={200}
           />
-          <Text text={title} />
+          <p>{title}</p>
         </div>
       </Link>
     </div>

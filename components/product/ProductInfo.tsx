@@ -1,5 +1,4 @@
 import React from "react";
-import Text from "../basic/Text/Text";
 import Ratings from "../ratings/Ratings";
 import Button from "../basic/Button";
 
@@ -17,7 +16,7 @@ export default function ProductInfo(props: ProductInfoProps) {
   return (
     <div>
       <Ratings title={name} rating={rating} reviews={reviews} />
-      <Text text={description} />
+      <p>{description}</p>
       <Button text={"Order samples"} onClick={buttonOnClickHandler} />
     </div>
   );

@@ -1,5 +1,4 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
-import Text from "../basic/Text/Text";
 import ProductSizeOption, {
   ProductSizeOptionType,
 } from "./configurationOptions/ProductSizeOption";
@@ -34,7 +33,7 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div>
-        <Text text={"Select a size"} />
+        <h4>Select a size</h4>
         <ul>
           {sizeOptions &&
             sizeOptions.map(({ value }, index) => (
@@ -49,7 +48,7 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
         </ul>
       </div>
       <div>
-        <Text text={"Select a quantity"} />
+        <h4>Select a quantity</h4>
         <ul>
           {quantityOptions &&
             quantityOptions.map(({ discount, price, value }, index) => (
