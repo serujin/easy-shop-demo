@@ -14,10 +14,11 @@ const createRatingsText = (reviews: number) => `${reviews} reviews`;
 export default function Ratings(props: RatingsProps) {
   const { title, titleStyle = "normal", rating, reviews } = props;
   const ratingsText = createRatingsText(reviews);
+  const titleClassName = titleStyle === "huge" ? styles.huge : styles.normal;
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
-        {titleStyle === "huge" ? <h1>{title}</h1> : <p>{title}</p>}
+        <p className={titleClassName}>{title}</p>
       </div>
       <div className={styles.reviewsContainer}>
         <StarDisplay rating={rating} maxRating={5} />
