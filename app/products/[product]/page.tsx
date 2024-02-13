@@ -1,5 +1,5 @@
 "use client";
-import ProductInfo from "@/components/product/ProductInfo";
+import ProductInfo from "@/components/product/product-info/ProductInfo";
 import { usePathname } from "next/navigation";
 import ProductConfiguration from "@/components/product/ProductConfiguration";
 import { ProductSizeOptionType } from "@/components/product/configurationOptions/ProductSizeOption";
@@ -32,17 +32,30 @@ export default function ProductPage() {
   }, [productId]);
 
   return (
-    <main className={styles.main}>
-      <ProductInfo
-        description={description}
-        name={name}
-        rating={rating}
-        reviews={reviews}
-      />
-      <ProductConfiguration
-        quantityOptions={quantityOptions}
-        sizeOptions={sizeOptions}
-      />
+    <main
+      className={styles.main}
+      style={{
+        backgroundImage: `url(/products/${productId}/background.webp)`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+      }}
+    >
+      <div className={styles.mainContainer}>
+        <div className={styles.productInfoContainer}>
+          <ProductInfo
+            description={description}
+            name={name}
+            rating={rating}
+            reviews={reviews}
+          />
+        </div>
+        <div className={styles.productConfigContainer}>
+          <ProductConfiguration
+            quantityOptions={quantityOptions}
+            sizeOptions={sizeOptions}
+          />
+        </div>
+      </div>
     </main>
   );
 }

@@ -1,0 +1,9 @@
+.productInfoContainer {
+  width: 100%;
+  background-color: red;
+}
+
+.description {
+  margin-top: 2%;
+  margin-bottom: 3%;
+}

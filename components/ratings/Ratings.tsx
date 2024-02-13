@@ -9,18 +9,28 @@ type RatingsProps = {
   reviews: number;
 };
 
-const createRatingsText = (reviews: number) => `${reviews} reviews`;
+const createRatingsText = (reviews: number) => {
+  const numberFormatter = new Intl.NumberFormat("en-US", {
+    style: "decimal",
+  });
+
+  return `${numberFormatter.format(reviews)} reviews`;
+};
 
 export default function Ratings(props: RatingsProps) {
   const { title, titleStyle = "normal", rating, reviews } = props;
+
   const ratingsText = createRatingsText(reviews);
   const titleClassName = titleStyle === "huge" ? styles.huge : styles.normal;
+  const reviewContainerClassName = `${styles.reviewsContainer} ${
+    titleStyle === "huge" ? styles.huge : styles.normal
+  }`;
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
         <p className={titleClassName}>{title}</p>
       </div>
-      <div className={styles.reviewsContainer}>
+      <div className={reviewContainerClassName}>
         <StarDisplay rating={rating} maxRating={5} />
         <p>{ratingsText}</p>
       </div>

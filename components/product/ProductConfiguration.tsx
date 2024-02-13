@@ -5,6 +5,7 @@ import ProductSizeOption, {
 import ProductQuantityOption, {
   ProductQuantityOptionType,
 } from "./configurationOptions/ProductQuantityOption";
+import styles from "./ProductConfiguration.module.css";
 
 type ProductConfigurationProps = {
   sizeOptions: Array<ProductSizeOptionType>;
@@ -32,7 +33,7 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
 
   return (
     <form noValidate onSubmit={handleSubmit}>
-      <div>
+      <div className={styles.sizeOptionsContainer}>
         <h4>Select a size</h4>
         <ul>
           {sizeOptions &&
@@ -45,26 +46,43 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
                 value={value}
               />
             ))}
+          <ProductSizeOption
+            handleSizeChange={handleSizeChange}
+            optionNumber={sizeOptions ? sizeOptions.length : 1}
+            selectedSize={selectedSize}
+            value={"Custom size"}
+          />
         </ul>
       </div>
-      <div>
+      <div className={styles.quantityOptionsContainer}>
         <h4>Select a quantity</h4>
-        <ul>
-          {quantityOptions &&
-            quantityOptions.map(({ discount, price, value }, index) => (
-              <ProductQuantityOption
-                discount={discount}
-                handleQuantityChange={handleQuantityChange}
-                key={index}
-                optionNumber={index}
-                price={price}
-                selectedQuantity={selectedQuantity}
-                value={value}
-              />
-            ))}
-        </ul>
+        <table>
+          <tbody>
+            {quantityOptions &&
+              quantityOptions.map(({ discount, price, value }, index) => (
+                <ProductQuantityOption
+                  discount={discount}
+                  handleQuantityChange={handleQuantityChange}
+                  key={index}
+                  optionNumber={index}
+                  price={price}
+                  selectedQuantity={selectedQuantity}
+                  value={value}
+                />
+              ))}
+            <ProductQuantityOption
+              handleQuantityChange={handleQuantityChange}
+              optionNumber={quantityOptions ? quantityOptions.length : 1}
+              selectedQuantity={selectedQuantity}
+              value={"Custom quantity"}
+            />
+          </tbody>
+        </table>
       </div>
-      <button type="submit">Continue</button>
+      <div className={styles.submitButtonContainer}>
+        <button type="submit">Continue</button>
+        <p>Next: upload artwork →</p>
+      </div>
     </form>
   );
 }

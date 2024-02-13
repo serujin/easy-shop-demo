@@ -1,6 +1,7 @@
 import React from "react";
-import Ratings from "../ratings/Ratings";
-import Button from "../basic/Button";
+import Ratings from "../../ratings/Ratings";
+import Button from "../../basic/Button";
+import styles from "./ProductInfo.module.css";
 
 type ProductInfoProps = {
   description: string;
@@ -14,9 +15,9 @@ const buttonOnClickHandler = () => console.log("Ordering samples...");
 export default function ProductInfo(props: ProductInfoProps) {
   const { description, name, rating, reviews } = props;
   return (
-    <div>
+    <div className={styles.productInfoContainer}>
       <Ratings title={name} rating={rating} reviews={reviews} />
-      <p>{description}</p>
+      <p className={styles.description}>{description}</p>
       <Button text={"Order samples"} onClick={buttonOnClickHandler} />
     </div>
   );

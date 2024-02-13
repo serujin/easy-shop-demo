@@ -1,25 +1,27 @@
 .container {
   display: flex;
   align-items: center;
-  width: 52%;
+  width: 100%;
 }
 
 .container * {
   display: flex;
 }
 
-.titleContainer {
-  padding: 1%;
+.container .titleContainer {
+  display: flex;
 }
 
-.reviewsContainer {
-  padding: 1%;
+.reviewsContainer.normal {
+  margin-left: 1%;
+  margin-top: -1%;
+  height: fit-content;
 }
 
-.normal {
+.titleContainer .normal {
   font-size: 2.3rem;
 }
 
-.huge {
+.titleContainer .huge {
   font-size: 3.8rem;
 }

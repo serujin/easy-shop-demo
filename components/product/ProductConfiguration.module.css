@@ -1,0 +1,30 @@
+.sizeOptionsContainer {
+  padding: 7%;
+}
+.quantityOptionsContainer {
+  padding: 7%;
+}
+.sizeOptionsContainer h4 {
+  margin-bottom: 7%;
+  font-size: 1.3rem;
+}
+.quantityOptionsContainer h4 {
+  margin-bottom: 7%;
+  font-size: 1.3rem;
+}
+.submitButtonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+.submitButtonContainer button {
+  padding: 5% 30%;
+  font-size: 1.4rem;
+  background-color: #f97805;
+  color: white;
+}
+.submitButtonContainer p {
+  margin-top: 7%;
+}
