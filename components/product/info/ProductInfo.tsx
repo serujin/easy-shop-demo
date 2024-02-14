@@ -11,6 +11,8 @@ type ProductInfoProps = {
 
 const buttonOnClickHandler = () => console.log("Ordering samples...");
 
+const BUTTON_TEXT = "Order samples";
+
 export default function ProductInfo(props: ProductInfoProps) {
   const { description, name, rating, reviews } = props;
   return (
@@ -21,7 +23,7 @@ export default function ProductInfo(props: ProductInfoProps) {
         className={styles.orderSamplesButton}
         onClick={buttonOnClickHandler}
       >
-        Order samples
+        {BUTTON_TEXT}
       </button>
     </div>
   );

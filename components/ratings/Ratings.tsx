@@ -3,7 +3,7 @@ import styles from "./Ratings.module.css";
 import StarDisplay from "./star-display/StarDisplay";
 
 type RatingsProps = {
-  titleStyle?: "huge" | "normal";
+  titleStyle?: "huge";
   title: string;
   rating: number;
   reviews: number;
@@ -18,7 +18,7 @@ const createRatingsText = (reviews: number) => {
 };
 
 export default function Ratings(props: RatingsProps) {
-  const { title, titleStyle = "normal", rating, reviews } = props;
+  const { title, titleStyle, rating, reviews } = props;
 
   const ratingsText = createRatingsText(reviews);
   const titleClassName = titleStyle === "huge" ? styles.huge : styles.normal;
