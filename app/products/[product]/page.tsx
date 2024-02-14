@@ -17,10 +17,10 @@ type ProductInformation = {
   sizeOptions: ProductSizeOptionType[]
 }
 
-export default function ProductPage() {
+export default function Product() {
   const [productData, setProductData] = useState({} as ProductInformation)
 
-  const productId = usePathname().split('/').at(-1)
+  const productId = usePathname()?.split('/').at(-1) ?? ''
 
   const { description, name, quantityOptions, rating, reviews, sizeOptions } =
     productData
