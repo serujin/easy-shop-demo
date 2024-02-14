@@ -18,13 +18,13 @@ export default function NavBar() {
   return (
     <div className={styles.navBar}>
       <div className={styles.navBarLeft}>
-        <NavBarLogo logoId="horse" />
+        <NavBarLogo variant="horse" />
         <nav className={styles.navigation}>
           {renderItems(NAVIGATION_LIST_ITEMS)}
         </nav>
       </div>
       <div className={styles.navBarRight}>
-        <NavBarLogo logoId="cart" />
+        <NavBarLogo variant="cart" />
         {renderItems(NAVIGATION_USER_ITEMS)}
       </div>
     </div>

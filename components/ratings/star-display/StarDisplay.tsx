@@ -22,11 +22,11 @@ export default function StarDisplay(props: StarDisplayProps) {
   return (
     <div className={styles.starsContainer}>
       {[...Array(fullStars)].map((_, index) => (
-        <Star id="full" key={index} />
+        <Star variant="full" key={index} />
       ))}
-      {shouldShowHalfStar && <Star id="half" />}
+      {shouldShowHalfStar && <Star variant="half" />}
       {[...Array(emptyStars)].map((_, index) => (
-        <Star id="empty" key={index} />
+        <Star variant="empty" key={index} />
       ))}
     </div>
   );
