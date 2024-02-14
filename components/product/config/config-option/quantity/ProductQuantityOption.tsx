@@ -1,29 +1,29 @@
-import React, { ChangeEvent } from "react";
-import styles from "./ProductQuantityOption.module.css";
+import React, { ChangeEvent } from 'react'
+import styles from './ProductQuantityOption.module.css'
 
 export type ProductQuantityOptionType = {
-  discount?: number;
-  price?: Amount;
-  value: string;
-  isLast?: boolean;
-};
+  discount?: number
+  price?: Amount
+  value: string
+  isLast?: boolean
+}
 
 type ProductQuantityOptionProps = ProductQuantityOptionType & {
-  handleQuantityChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  optionNumber: number;
-  selectedQuantity: string;
-};
+  handleQuantityChange: (event: ChangeEvent<HTMLInputElement>) => void
+  optionNumber: number
+  selectedQuantity: string
+}
 
 const getId = (optionNumber: number, value: string) => {
-  const valueId = value.toLowerCase().replace(" ", "-");
-  return `quantity-${valueId}-${optionNumber}`;
-};
+  const valueId = value.toLowerCase().replace(' ', '-')
+  return `quantity-${valueId}-${optionNumber}`
+}
 
 const getDiscountLabel = (discount?: number) =>
-  discount ? `Save ${discount}%` : "";
+  discount ? `Save ${discount}%` : ''
 
 const getPriceLabel = (price?: Amount) =>
-  price ? `${price.currency}${price.quantity}` : "";
+  price ? `${price.currency}${price.quantity}` : ''
 
 const getValueTableCell = (isLast: boolean, id: string, value: string) =>
   isLast ? (
@@ -34,10 +34,10 @@ const getValueTableCell = (isLast: boolean, id: string, value: string) =>
     <td>
       <label htmlFor={id}>{value}</label>
     </td>
-  );
+  )
 
 export default function ProductQuantityOption(
-  props: ProductQuantityOptionProps
+  props: ProductQuantityOptionProps,
 ) {
   const {
     discount,
@@ -47,12 +47,12 @@ export default function ProductQuantityOption(
     selectedQuantity,
     value,
     isLast = false,
-  } = props;
+  } = props
 
-  const id = getId(optionNumber, value);
-  const discountLabel = getDiscountLabel(discount);
-  const priceLabelText = getPriceLabel(price);
-  const discountTableCellClassName = `${styles.rightAlign} ${styles.discount}`;
+  const id = getId(optionNumber, value)
+  const discountLabel = getDiscountLabel(discount)
+  const priceLabelText = getPriceLabel(price)
+  const discountTableCellClassName = `${styles.rightAlign} ${styles.discount}`
 
   return (
     <tr className={styles.quantityRow}>
@@ -78,5 +78,5 @@ export default function ProductQuantityOption(
         </td>
       )}
     </tr>
-  );
+  )
 }

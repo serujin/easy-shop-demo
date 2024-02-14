@@ -1,20 +1,20 @@
-import React from "react";
-import Ratings from "../../ratings/Ratings";
-import styles from "./ProductInfo.module.css";
+import React from 'react'
+import Ratings from '../../ratings/Ratings'
+import styles from './ProductInfo.module.css'
 
 type ProductInfoProps = {
-  description: string;
-  name: string;
-  rating: number;
-  reviews: number;
-};
+  description: string
+  name: string
+  rating: number
+  reviews: number
+}
 
-const buttonOnClickHandler = () => console.log("Ordering samples...");
+const buttonOnClickHandler = () => console.log('Ordering samples...')
 
-const BUTTON_TEXT = "Order samples";
+const BUTTON_TEXT = 'Order samples'
 
 export default function ProductInfo(props: ProductInfoProps) {
-  const { description, name, rating, reviews } = props;
+  const { description, name, rating, reviews } = props
   return (
     <div className={styles.productInfoContainer}>
       <Ratings title={name} rating={rating} reviews={reviews} />
@@ -26,5 +26,5 @@ export default function ProductInfo(props: ProductInfoProps) {
         {BUTTON_TEXT}
       </button>
     </div>
-  );
+  )
 }

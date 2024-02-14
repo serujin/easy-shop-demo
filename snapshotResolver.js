@@ -3,5 +3,5 @@ module.exports = {
     testPath + snapshotExtension,
   resolveTestPath: (snapshotFilePath, snapshotExtension) =>
     snapshotFilePath.slice(0, -snapshotExtension.length),
-  testPathForConsistencyCheck: "some/example.test.js",
-};
+  testPathForConsistencyCheck: 'some/example.test.js',
+}

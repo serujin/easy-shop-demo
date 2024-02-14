@@ -1,18 +1,18 @@
-import React from "react";
-import Image from "next/image";
-import styles from "./Star.module.css";
+import React from 'react'
+import Image from 'next/image'
+import styles from './Star.module.css'
 
-const STAR_SIZE = 17;
+const STAR_SIZE = 17
 
 type StarProps = {
-  variant: "full" | "half" | "empty";
-};
+  variant: 'full' | 'half' | 'empty'
+}
 
 export default function Star(props: StarProps) {
-  const { variant } = props;
-  const imageUrl = `/ratings/${variant}-star.svg`;
-  const camelCaseVariant = variant.slice(0, 1).toUpperCase() + variant.slice(1);
-  const imageAlt = `${camelCaseVariant} star`;
+  const { variant } = props
+  const imageUrl = `/ratings/${variant}-star.svg`
+  const camelCaseVariant = variant.slice(0, 1).toUpperCase() + variant.slice(1)
+  const imageAlt = `${camelCaseVariant} star`
   return (
     <Image
       className={styles.starItem}
@@ -21,5 +21,5 @@ export default function Star(props: StarProps) {
       width={STAR_SIZE}
       height={STAR_SIZE}
     />
-  );
+  )
 }

@@ -1,43 +1,41 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
-import styles from "./ProductConfiguration.module.css";
+import React, { ChangeEvent, FormEvent, useState } from 'react'
+import styles from './ProductConfiguration.module.css'
 import ProductSizeOption, {
   ProductSizeOptionType,
-} from "./config-option/size/ProductSizeOption";
+} from './config-option/size/ProductSizeOption'
 import ProductQuantityOption, {
   ProductQuantityOptionType,
-} from "./config-option/quantity/ProductQuantityOption";
+} from './config-option/quantity/ProductQuantityOption'
 
 type ProductConfigurationProps = {
-  sizeOptions: Array<ProductSizeOptionType>;
-  quantityOptions: Array<ProductQuantityOptionType>;
-};
+  sizeOptions: Array<ProductSizeOptionType>
+  quantityOptions: Array<ProductQuantityOptionType>
+}
 
 export default function ProductConfiguration(props: ProductConfigurationProps) {
-  const [selectedSize, setSelectedSize] = useState<string>("");
-  const [selectedQuantity, setSelectedQuantity] = useState<string>("");
+  const [selectedSize, setSelectedSize] = useState<string>('')
+  const [selectedQuantity, setSelectedQuantity] = useState<string>('')
 
-  const { sizeOptions, quantityOptions } = props;
+  const { sizeOptions, quantityOptions } = props
   const handleSizeChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSelectedSize(event.target.value);
-  };
+    setSelectedSize(event.target.value)
+  }
 
   const handleQuantityChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSelectedQuantity(event.target.value);
-  };
+    setSelectedQuantity(event.target.value)
+  }
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(
-      `Ordering ${selectedQuantity} stickers of size ${selectedSize}`
-    );
-  };
+    event.preventDefault()
+    console.log(`Ordering ${selectedQuantity} stickers of size ${selectedSize}`)
+  }
 
   const renderSelectedSize =
-    selectedSize === "" ? sizeOptions?.at(0)?.value ?? "" : selectedSize;
+    selectedSize === '' ? sizeOptions?.at(0)?.value ?? '' : selectedSize
   const renderSelectedQuantity =
-    selectedQuantity === ""
-      ? quantityOptions?.at(0)?.value ?? ""
-      : selectedQuantity;
+    selectedQuantity === ''
+      ? quantityOptions?.at(0)?.value ?? ''
+      : selectedQuantity
 
   return (
     <form noValidate onSubmit={handleSubmit}>
@@ -58,7 +56,7 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
             handleSizeChange={handleSizeChange}
             optionNumber={sizeOptions ? sizeOptions.length : 1}
             selectedSize={renderSelectedSize}
-            value={"Custom size"}
+            value={'Custom size'}
           />
         </ul>
       </div>
@@ -82,7 +80,7 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
               handleQuantityChange={handleQuantityChange}
               optionNumber={quantityOptions ? quantityOptions.length : 1}
               selectedQuantity={renderSelectedQuantity}
-              value={"Custom quantity"}
+              value={'Custom quantity'}
             />
           </tbody>
         </table>
@@ -92,5 +90,5 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
         <p>Next: upload artwork →</p>
       </div>
     </form>
-  );
+  )
 }

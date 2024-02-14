@@ -1,4 +1,4 @@
 type Amount = {
-  quantity: number;
-  currency: string;
-};
+  quantity: number
+  currency: string
+}

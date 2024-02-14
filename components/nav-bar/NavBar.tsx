@@ -1,10 +1,10 @@
-import React from "react";
-import NavigationItem from "./navigation-item/NavigationItem";
-import NavBarLogo from "./logo/NavBarLogo";
-import styles from "./NavBar.module.css";
+import React from 'react'
+import NavigationItem from './navigation-item/NavigationItem'
+import NavBarLogo from './logo/NavBarLogo'
+import styles from './NavBar.module.css'
 
-const NAVIGATION_LIST_ITEMS = ["Products", "Tools", "Samples", "Deals"];
-const NAVIGATION_USER_ITEMS = ["Log in", "Sign up"];
+const NAVIGATION_LIST_ITEMS = ['Products', 'Tools', 'Samples', 'Deals']
+const NAVIGATION_USER_ITEMS = ['Log in', 'Sign up']
 
 const renderItems = (list: string[]) => (
   <ul className={styles.navigationList}>
@@ -12,7 +12,7 @@ const renderItems = (list: string[]) => (
       <NavigationItem key={index} text={text} />
     ))}
   </ul>
-);
+)
 
 export default function NavBar() {
   return (
@@ -28,5 +28,5 @@ export default function NavBar() {
         {renderItems(NAVIGATION_USER_ITEMS)}
       </div>
     </div>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import ProductQuantityOption from "./ProductQuantityOption";
-import { describe, expect, jest, it } from "@jest/globals";
+import React from 'react'
+import { render } from '@testing-library/react'
+import ProductQuantityOption from './ProductQuantityOption'
+import { describe, expect, jest, it } from '@jest/globals'
 
-describe("ProductQuantityOption component", () => {
-  describe("with only required props", () => {
-    it("should render correctly", () => {
+describe('ProductQuantityOption component', () => {
+  describe('with only required props', () => {
+    it('should render correctly', () => {
       const { container } = render(
         <table>
           <tbody>
@@ -16,14 +16,14 @@ describe("ProductQuantityOption component", () => {
               value="value"
             />
           </tbody>
-        </table>
-      );
+        </table>,
+      )
 
-      expect(container).toMatchSnapshot();
-    });
-  });
-  describe("with all props", () => {
-    it("should render correctly", () => {
+      expect(container).toMatchSnapshot()
+    })
+  })
+  describe('with all props', () => {
+    it('should render correctly', () => {
       const { container } = render(
         <table>
           <tbody>
@@ -33,13 +33,13 @@ describe("ProductQuantityOption component", () => {
               selectedQuantity="selectedQuantity"
               value="value"
               discount={10}
-              price={{ quantity: 0, currency: "$" }}
+              price={{ quantity: 0, currency: '$' }}
               isLast
             />
           </tbody>
-        </table>
-      );
-      expect(container).toMatchSnapshot();
-    });
-  });
-});
+        </table>,
+      )
+      expect(container).toMatchSnapshot()
+    })
+  })
+})

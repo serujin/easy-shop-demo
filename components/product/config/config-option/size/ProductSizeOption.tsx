@@ -1,27 +1,27 @@
-import React, { ChangeEvent } from "react";
-import styles from "./ProductSizeOption.module.css";
+import React, { ChangeEvent } from 'react'
+import styles from './ProductSizeOption.module.css'
 
 export type ProductSizeOptionType = {
-  value: string;
-};
+  value: string
+}
 
 type ProductSizeOptionProps = ProductSizeOptionType & {
-  handleSizeChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  optionNumber: number;
-  selectedSize: string;
-};
+  handleSizeChange: (event: ChangeEvent<HTMLInputElement>) => void
+  optionNumber: number
+  selectedSize: string
+}
 
 const createId = (optionNumber: number, value: string) => {
   const dimension = value
-    .replace(/[^\w\s]/gi, "")
+    .replace(/[^\w\s]/gi, '')
     .toLowerCase()
-    .replace(" ", "-");
-  return `size-${dimension}-${optionNumber}`;
-};
+    .replace(' ', '-')
+  return `size-${dimension}-${optionNumber}`
+}
 
 export default function ProductSizeOption(props: ProductSizeOptionProps) {
-  const { handleSizeChange, optionNumber, selectedSize, value } = props;
-  const id = createId(optionNumber, value);
+  const { handleSizeChange, optionNumber, selectedSize, value } = props
+  const id = createId(optionNumber, value)
   return (
     <li className={styles.productSizeOptionContainer}>
       <input
@@ -37,5 +37,5 @@ export default function ProductSizeOption(props: ProductSizeOptionProps) {
         {value}
       </label>
     </li>
-  );
+  )
 }

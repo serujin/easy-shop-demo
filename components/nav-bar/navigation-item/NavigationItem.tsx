@@ -1,18 +1,18 @@
-import React from "react";
-import Link from "next/link";
-import styles from "./NavigationItem.module.css";
+import React from 'react'
+import Link from 'next/link'
+import styles from './NavigationItem.module.css'
 
 type NavigationItemProps = {
-  text: string;
-};
+  text: string
+}
 
 export default function NavigationItem(props: NavigationItemProps) {
-  const { text } = props;
+  const { text } = props
   return (
     <li>
-      <Link className={styles.navigationLink} href={"#"}>
+      <Link className={styles.navigationLink} href={'#'}>
         <b>{text}</b>
       </Link>
     </li>
-  );
+  )
 }
