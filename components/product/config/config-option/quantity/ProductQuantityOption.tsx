@@ -52,6 +52,7 @@ export default function ProductQuantityOption(
   const id = getId(optionNumber, value);
   const discountLabel = getDiscountLabel(discount);
   const priceLabelText = getPriceLabel(price);
+  const discountTableCellClassName = `${styles.rightAlign} ${styles.discount}`;
 
   return (
     <tr className={styles.quantityRow}>
@@ -72,8 +73,8 @@ export default function ProductQuantityOption(
         </td>
       )}
       {discount && (
-        <td className={styles.rightAlign}>
-          <p>{discountLabel}</p>
+        <td className={discountTableCellClassName}>
+          <label htmlFor={id}>{discountLabel}</label>
         </td>
       )}
     </tr>
