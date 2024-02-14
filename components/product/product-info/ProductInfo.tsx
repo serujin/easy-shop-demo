@@ -1,6 +1,5 @@
 import React from "react";
 import Ratings from "../../ratings/Ratings";
-import Button from "../../basic/Button";
 import styles from "./ProductInfo.module.css";
 
 type ProductInfoProps = {
@@ -18,7 +17,12 @@ export default function ProductInfo(props: ProductInfoProps) {
     <div className={styles.productInfoContainer}>
       <Ratings title={name} rating={rating} reviews={reviews} />
       <p className={styles.description}>{description}</p>
-      <Button text={"Order samples"} onClick={buttonOnClickHandler} />
+      <button
+        className={styles.orderSamplesButton}
+        onClick={buttonOnClickHandler}
+      >
+        Order samples
+      </button>
     </div>
   );
 }

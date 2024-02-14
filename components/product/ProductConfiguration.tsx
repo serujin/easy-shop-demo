@@ -17,7 +17,6 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
   const [selectedQuantity, setSelectedQuantity] = useState<string>("");
 
   const { sizeOptions, quantityOptions } = props;
-
   const handleSizeChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSelectedSize(event.target.value);
   };
@@ -31,6 +30,13 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
     // Handle form submission here
   };
 
+  const renderSelectedSize =
+    selectedSize === "" ? sizeOptions?.at(0)?.value ?? "" : selectedSize;
+  const renderSelectedQuantity =
+    selectedQuantity === ""
+      ? quantityOptions?.at(0)?.value ?? ""
+      : selectedQuantity;
+
   return (
     <form noValidate onSubmit={handleSubmit}>
       <div className={styles.sizeOptionsContainer}>
@@ -42,14 +48,14 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
                 handleSizeChange={handleSizeChange}
                 key={index}
                 optionNumber={index}
-                selectedSize={selectedSize}
+                selectedSize={renderSelectedSize}
                 value={value}
               />
             ))}
           <ProductSizeOption
             handleSizeChange={handleSizeChange}
             optionNumber={sizeOptions ? sizeOptions.length : 1}
-            selectedSize={selectedSize}
+            selectedSize={renderSelectedSize}
             value={"Custom size"}
           />
         </ul>
@@ -66,14 +72,14 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
                   key={index}
                   optionNumber={index}
                   price={price}
-                  selectedQuantity={selectedQuantity}
+                  selectedQuantity={renderSelectedQuantity}
                   value={value}
                 />
               ))}
             <ProductQuantityOption
               handleQuantityChange={handleQuantityChange}
               optionNumber={quantityOptions ? quantityOptions.length : 1}
-              selectedQuantity={selectedQuantity}
+              selectedQuantity={renderSelectedQuantity}
               value={"Custom quantity"}
             />
           </tbody>

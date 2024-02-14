@@ -12,7 +12,10 @@ type ProductSizeOptionProps = ProductSizeOptionType & {
 };
 
 const createId = (optionNumber: number, value: string) => {
-  const dimension = value.replace(/[^\dx]/gi, "").toLowerCase();
+  const dimension = value
+    .replace(/[^\w\s]/gi, "")
+    .toLowerCase()
+    .replace(" ", "-");
   return `size-${dimension}-${optionNumber}`;
 };
 

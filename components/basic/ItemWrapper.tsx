@@ -23,7 +23,7 @@ export default function ItemWrapper(props: ItemWrapperProps) {
             width={200}
             height={200}
           />
-          <p>{title}</p>
+          <p className={styles.itemTitle}>{title}</p>
         </div>
       </Link>
     </div>

@@ -24,3 +24,12 @@
 .itemImage {
   height: 100%;
 }
+
+.itemTitle {
+  color: #404040;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}

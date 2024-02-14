@@ -2,3 +2,9 @@
   text-align: right;
   padding: 2px 10px;
 }
+.quantityRow * {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.inputCell {
+  padding-top: 3px;
+}

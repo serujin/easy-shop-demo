@@ -2,6 +2,10 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import styles from "./NavBar.module.css";
+import NavigationItem from "./NavigationItem";
+
+const NAVIGATION_LIST_ITEMS = ["Products", "Tools", "Samples", "Deals"];
+const NAVIGATION_USER_ITEMS = ["Log in", "Sign up"];
 
 export default function NavBar() {
   return (
@@ -18,26 +22,9 @@ export default function NavBar() {
         </Link>
         <nav className={styles.navigation}>
           <ul className={styles.navigationList}>
-            <li>
-              <Link href={"#"}>
-                <b>Products</b>
-              </Link>
-            </li>
-            <li>
-              <Link href={"#"}>
-                <b>Tools</b>
-              </Link>
-            </li>
-            <li>
-              <Link href={"#"}>
-                <b>Samples</b>
-              </Link>
-            </li>
-            <li>
-              <Link href={"#"}>
-                <b>Deals</b>
-              </Link>
-            </li>
+            {NAVIGATION_LIST_ITEMS.map((text, index) => (
+              <NavigationItem key={index} text={text} />
+            ))}
           </ul>
         </nav>
       </div>
@@ -52,16 +39,9 @@ export default function NavBar() {
           />
         </Link>
         <ul className={styles.navigationList}>
-          <li>
-            <Link href={"#"}>
-              <b>Login</b>
-            </Link>
-          </li>
-          <li>
-            <Link href={"#"}>
-              <b>Sign up</b>
-            </Link>
-          </li>
+          {NAVIGATION_USER_ITEMS.map((text, index) => (
+            <NavigationItem key={index} text={text} />
+          ))}
         </ul>
       </div>
     </div>

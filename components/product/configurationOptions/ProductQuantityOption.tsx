@@ -14,8 +14,10 @@ type ProductQuantityOptionProps = ProductQuantityOptionType & {
   selectedQuantity: string;
 };
 
-const createId = (optionNumber: number, value: string) =>
-  `quantity-${value}-${optionNumber}`;
+const createId = (optionNumber: number, value: string) => {
+  const valueId = value.toLowerCase().replace(" ", "-");
+  return `quantity-${valueId}-${optionNumber}`;
+};
 
 export default function ProductQuantityOption(
   props: ProductQuantityOptionProps
