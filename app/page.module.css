@@ -26,6 +26,13 @@
 }
 
 .productsContainer {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.productsWrapper {
   margin-top: 2%;
   width: 52%;
+  flex-wrap: wrap;
 }

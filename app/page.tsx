@@ -6,7 +6,7 @@ import { getAllProductsBasicInformation } from '@/lib/products'
 import styles from './page.module.css'
 
 const createProductHref = (id: string) => `/products/${id}`
-const createProductImgSrc = (id: string) => `/products/${id}.webp`
+const createProductImgSrc = (id: string) => `/products/${id}/icon.webp`
 
 export default function Home() {
   const [products, setProducts] = useState([])
@@ -28,15 +28,17 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.productsContainer}>
-        {products.map(({ id, name }, index) => (
-          <ItemWrapper
-            key={index}
-            href={createProductHref(id)}
-            imgAlt={name}
-            imgSrc={createProductImgSrc(id)}
-            title={name}
-          />
-        ))}
+        <div className={styles.productsWrapper}>
+          {products.map(({ id, name }, index) => (
+            <ItemWrapper
+              key={index}
+              href={createProductHref(id)}
+              imgAlt={name}
+              imgSrc={createProductImgSrc(id)}
+              title={name}
+            />
+          ))}
+        </div>
       </div>
     </main>
   )
