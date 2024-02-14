@@ -23,7 +23,7 @@ const getDiscountLabel = (discount?: number) =>
   discount ? `Save ${discount}%` : "";
 
 const getPriceLabel = (price?: Amount) =>
-  price ? `${price.quantity}${price.currency}` : "";
+  price ? `${price.currency}${price.quantity}` : "";
 
 const getValueTableCell = (isLast: boolean, id: string, value: string) =>
   isLast ? (
