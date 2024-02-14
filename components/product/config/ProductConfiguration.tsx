@@ -27,7 +27,9 @@ export default function ProductConfiguration(props: ProductConfigurationProps) {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Handle form submission here
+    console.log(
+      `Ordering ${selectedQuantity} stickers of size ${selectedSize}`
+    );
   };
 
   const renderSelectedSize =
