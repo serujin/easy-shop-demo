@@ -95,11 +95,6 @@ exports[`Product page should render correctly 1`] = `
           <p
             class="description"
           />
-          <button
-            class="orderSamplesButton"
-          >
-            Order samples
-          </button>
         </div>
       </div>
       <div

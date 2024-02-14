@@ -14,6 +14,7 @@ type ProductInformation = {
   quantityOptions: ProductQuantityOptionType[]
   rating: number
   reviews: number
+  samplesAvailable: boolean
   sizeOptions: ProductSizeOptionType[]
 }
 
@@ -22,8 +23,15 @@ export default function Product() {
 
   const productId = usePathname()?.split('/').at(-1) ?? ''
 
-  const { description, name, quantityOptions, rating, reviews, sizeOptions } =
-    productData
+  const {
+    description,
+    name,
+    quantityOptions,
+    rating,
+    reviews,
+    samplesAvailable,
+    sizeOptions,
+  } = productData
 
   useEffect(() => {
     getProductInformationById(productId ? productId : '').then(
@@ -47,6 +55,7 @@ export default function Product() {
             name={name}
             rating={rating}
             reviews={reviews}
+            samplesAvailable={samplesAvailable}
           />
         </div>
         <div className={styles.productConfigContainer}>

@@ -94,7 +94,11 @@ exports[`Home page should render correctly 1`] = `
     </div>
     <div
       class="productsContainer"
-    />
+    >
+      <div
+        class="productsWrapper"
+      />
+    </div>
   </main>
 </div>
 `;
