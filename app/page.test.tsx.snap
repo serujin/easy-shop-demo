@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page should render correctly 1`] = `
+<div>
+  <main
+    class="main"
+  >
+    <div
+      class="headerContainer"
+    >
+      <div
+        class="ratingsContainer"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="titleContainer"
+          >
+            <p
+              class="huge"
+            >
+              Custom stickers
+            </p>
+          </div>
+          <div
+            class="reviewsContainer huge"
+          >
+            <div
+              class="starsContainer"
+            >
+              <img
+                alt="Full star"
+                class="starItem"
+                data-nimg="1"
+                decoding="async"
+                height="17"
+                loading="lazy"
+                src="/ratings/full-star.svg"
+                style="color: transparent;"
+                width="17"
+              />
+              <img
+                alt="Full star"
+                class="starItem"
+                data-nimg="1"
+                decoding="async"
+                height="17"
+                loading="lazy"
+                src="/ratings/full-star.svg"
+                style="color: transparent;"
+                width="17"
+              />
+              <img
+                alt="Full star"
+                class="starItem"
+                data-nimg="1"
+                decoding="async"
+                height="17"
+                loading="lazy"
+                src="/ratings/full-star.svg"
+                style="color: transparent;"
+                width="17"
+              />
+              <img
+                alt="Full star"
+                class="starItem"
+                data-nimg="1"
+                decoding="async"
+                height="17"
+                loading="lazy"
+                src="/ratings/full-star.svg"
+                style="color: transparent;"
+                width="17"
+              />
+              <img
+                alt="Half star"
+                class="starItem"
+                data-nimg="1"
+                decoding="async"
+                height="17"
+                loading="lazy"
+                src="/ratings/half-star.svg"
+                style="color: transparent;"
+                width="17"
+              />
+              <img
+                alt="Empty star"
+                class="starItem"
+                data-nimg="1"
+                decoding="async"
+                height="17"
+                loading="lazy"
+                src="/ratings/empty-star.svg"
+                style="color: transparent;"
+                width="17"
+              />
+            </div>
+            <p>
+              20,000 reviews
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="productsContainer"
+    />
+  </main>
+</div>
+`;
