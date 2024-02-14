@@ -11,7 +11,7 @@ exports[`NavBarLogo component should render correctly 1`] = `
       decoding="async"
       height="20"
       loading="lazy"
-      src="/navBar/cart.svg"
+      src="/navBar/logo/cart.svg"
       style="color: transparent;"
       width="20"
     />

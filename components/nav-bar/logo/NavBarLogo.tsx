@@ -12,7 +12,7 @@ export default function NavBarLogo(props: NavBarLogoProps) {
   const { variant } = props
   const camelCaseVariant = variant.slice(0, 1).toUpperCase() + variant.slice(1)
   const imageAlt = `${camelCaseVariant} logo`
-  const imageUrl = `/navBar/${variant}.svg`
+  const imageUrl = `/navBar/logo/${variant}.svg`
   return (
     <Link href={'/'}>
       <Image
