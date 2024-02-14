@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductSizeOption component should render correctly 1`] = `
+<div>
+  <li
+    class="productSizeOptionContainer"
+  >
+    <input
+      class="productSizeOptionInput"
+      id="size-value-0"
+      name="dimensions"
+      type="radio"
+      value="value"
+    />
+    <label
+      class="productSizeOptionLabel"
+      for="size-value-0"
+    >
+      value
+    </label>
+  </li>
+</div>
+`;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItempWrapper component should render correctly 1`] = `
+<div>
+  <div
+    class="itemWrapperContainer"
+  >
+    <a
+      href="href"
+    >
+      <div
+        class="itemContainer"
+      >
+        <img
+          alt="imgAlt"
+          class="itemImage"
+          data-nimg="1"
+          decoding="async"
+          height="200"
+          loading="lazy"
+          src="/_next/image?url=%2FimgSrc&w=640&q=75"
+          srcset="/_next/image?url=%2FimgSrc&w=256&q=75 1x, /_next/image?url=%2FimgSrc&w=640&q=75 2x"
+          style="color: transparent;"
+          width="200"
+        />
+        <p
+          class="itemTitle"
+        >
+          title
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
+`;

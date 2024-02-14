@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Star component when rendering the empty variant should render correctly 1`] = `
+<div>
+  <img
+    alt="Empty star"
+    class="starItem"
+    data-nimg="1"
+    decoding="async"
+    height="17"
+    loading="lazy"
+    src="/ratings/empty-star.svg"
+    style="color: transparent;"
+    width="17"
+  />
+</div>
+`;
+
+exports[`Star component when rendering the full variant should render correctly 1`] = `
+<div>
+  <img
+    alt="Full star"
+    class="starItem"
+    data-nimg="1"
+    decoding="async"
+    height="17"
+    loading="lazy"
+    src="/ratings/full-star.svg"
+    style="color: transparent;"
+    width="17"
+  />
+</div>
+`;
+
+exports[`Star component when rendering the half variant should render correctly 1`] = `
+<div>
+  <img
+    alt="Half star"
+    class="starItem"
+    data-nimg="1"
+    decoding="async"
+    height="17"
+    loading="lazy"
+    src="/ratings/half-star.svg"
+    style="color: transparent;"
+    width="17"
+  />
+</div>
+`;

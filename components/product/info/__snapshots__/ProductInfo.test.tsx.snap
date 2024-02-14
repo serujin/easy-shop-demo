@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductInfo component should render correctly 1`] = `
+<div>
+  <div
+    class="productInfoContainer"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="titleContainer"
+      >
+        <p
+          class="normal"
+        >
+          name
+        </p>
+      </div>
+      <div
+        class="reviewsContainer normal"
+      >
+        <div
+          class="starsContainer"
+        >
+          <img
+            alt="Full star"
+            class="starItem"
+            data-nimg="1"
+            decoding="async"
+            height="17"
+            loading="lazy"
+            src="/ratings/full-star.svg"
+            style="color: transparent;"
+            width="17"
+          />
+          <img
+            alt="Full star"
+            class="starItem"
+            data-nimg="1"
+            decoding="async"
+            height="17"
+            loading="lazy"
+            src="/ratings/full-star.svg"
+            style="color: transparent;"
+            width="17"
+          />
+          <img
+            alt="Full star"
+            class="starItem"
+            data-nimg="1"
+            decoding="async"
+            height="17"
+            loading="lazy"
+            src="/ratings/full-star.svg"
+            style="color: transparent;"
+            width="17"
+          />
+          <img
+            alt="Full star"
+            class="starItem"
+            data-nimg="1"
+            decoding="async"
+            height="17"
+            loading="lazy"
+            src="/ratings/full-star.svg"
+            style="color: transparent;"
+            width="17"
+          />
+          <img
+            alt="Half star"
+            class="starItem"
+            data-nimg="1"
+            decoding="async"
+            height="17"
+            loading="lazy"
+            src="/ratings/half-star.svg"
+            style="color: transparent;"
+            width="17"
+          />
+          <img
+            alt="Empty star"
+            class="starItem"
+            data-nimg="1"
+            decoding="async"
+            height="17"
+            loading="lazy"
+            src="/ratings/empty-star.svg"
+            style="color: transparent;"
+            width="17"
+          />
+        </div>
+        <p>
+          1,000 reviews
+        </p>
+      </div>
+    </div>
+    <p
+      class="description"
+    >
+      description
+    </p>
+    <button
+      class="orderSamplesButton"
+    >
+      Order samples
+    </button>
+  </div>
+</div>
+`;

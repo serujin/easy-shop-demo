@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductQuantityOption component with all props should render correctly 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr
+        class="quantityRow"
+      >
+        <td
+          class="inputCell"
+        >
+          <input
+            id="quantity-value-0"
+            name="quantities"
+            type="radio"
+            value="value"
+          />
+        </td>
+        <td
+          colspan="3"
+        >
+          <label
+            for="quantity-value-0"
+          >
+            value
+          </label>
+        </td>
+        <td
+          class="rightAlign"
+        >
+          <label
+            for="quantity-value-0"
+          >
+            $0
+          </label>
+        </td>
+        <td
+          class="rightAlign discount"
+        >
+          <label
+            for="quantity-value-0"
+          >
+            Save 10%
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`ProductQuantityOption component with only required props should render correctly 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr
+        class="quantityRow"
+      >
+        <td
+          class="inputCell"
+        >
+          <input
+            id="quantity-value-0"
+            name="quantities"
+            type="radio"
+            value="value"
+          />
+        </td>
+        <td>
+          <label
+            for="quantity-value-0"
+          >
+            value
+          </label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

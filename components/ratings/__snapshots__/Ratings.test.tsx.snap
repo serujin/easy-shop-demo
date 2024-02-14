@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Ratings component when not receiving any titleStyle should render correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="titleContainer"
+    >
+      <p
+        class="normal"
+      >
+        title
+      </p>
+    </div>
+    <div
+      class="reviewsContainer normal"
+    >
+      <div
+        class="starsContainer"
+      >
+        <img
+          alt="Full star"
+          class="starItem"
+          data-nimg="1"
+          decoding="async"
+          height="17"
+          loading="lazy"
+          src="/ratings/full-star.svg"
+          style="color: transparent;"
+          width="17"
+        />
+        <img
+          alt="Full star"
+          class="starItem"
+          data-nimg="1"
+          decoding="async"
+          height="17"
+          loading="lazy"
+          src="/ratings/full-star.svg"
+          style="color: transparent;"
+          width="17"
+        />
+        <img
+          alt="Full star"
+          class="starItem"
+          data-nimg="1"
+          decoding="async"
+          height="17"
+          loading="lazy"
+          src="/ratings/full-star.svg"
+          style="color: transparent;"
+          width="17"
+        />
+        <img
+          alt="Full star"
+          class="starItem"
+          data-nimg="1"
+          decoding="async"
+          height="17"
+          loading="lazy"
+          src="/ratings/full-star.svg"
+          style="color: transparent;"
+          width="17"
+        />
+        <img
+          alt="Full star"
+          class="starItem"
+          data-nimg="1"
+          decoding="async"
+          height="17"
+          loading="lazy"
+          src="/ratings/full-star.svg"
+          style="color: transparent;"
+          width="17"
+        />
+      </div>
+      <p>
+        20,000 reviews
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Ratings component when receiving huge as a titleStyle should render correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="titleContainer"
+    >
+      <p
+        class="huge"
+      >
+        title
+      </p>
+    </div>
+    <div
+      class="reviewsContainer huge"
+    >
+      <div
+        class="starsContainer"
+      >
+        <img
+          alt="Full star"
+          class="starItem"
+          data-nimg="1"
+          decoding="async"
+          height="17"
+          loading="lazy"
+          src="/ratings/full-star.svg"
+          style="color: transparent;"
+          width="17"
+        />
+        <img
+          alt="Full star"
+          class="starItem"
+          data-nimg="1"
+          decoding="async"
+          height="17"
+          loading="lazy"
+          src="/ratings/full-star.svg"
+          style="color: transparent;"
+          width="17"
+        />
+        <img
+          alt="Full star"
+          class="starItem"
+          data-nimg="1"
+          decoding="async"
+          height="17"
+          loading="lazy"
+          src="/ratings/full-star.svg"
+          style="color: transparent;"
+          width="17"
+        />
+        <img
+          alt="Full star"
+          class="starItem"
+          data-nimg="1"
+          decoding="async"
+          height="17"
+          loading="lazy"
+          src="/ratings/full-star.svg"
+          style="color: transparent;"
+          width="17"
+        />
+        <img
+          alt="Full star"
+          class="starItem"
+          data-nimg="1"
+          decoding="async"
+          height="17"
+          loading="lazy"
+          src="/ratings/full-star.svg"
+          style="color: transparent;"
+          width="17"
+        />
+      </div>
+      <p>
+        20,000 reviews
+      </p>
+    </div>
+  </div>
+</div>
+`;

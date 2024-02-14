@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component should render correctly 1`] = `
+<div>
+  <div
+    class="navBar"
+  >
+    <div
+      class="navBarLeft"
+    >
+      <a
+        href="/"
+      >
+        <img
+          alt="Horse logo"
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/navBar/horse.svg"
+          style="color: transparent;"
+          width="20"
+        />
+      </a>
+      <nav
+        class="navigation"
+      >
+        <ul
+          class="navigationList"
+        >
+          <li>
+            <a
+              class="navigationLink"
+              href="#"
+            >
+              <b>
+                Products
+              </b>
+            </a>
+          </li>
+          <li>
+            <a
+              class="navigationLink"
+              href="#"
+            >
+              <b>
+                Tools
+              </b>
+            </a>
+          </li>
+          <li>
+            <a
+              class="navigationLink"
+              href="#"
+            >
+              <b>
+                Samples
+              </b>
+            </a>
+          </li>
+          <li>
+            <a
+              class="navigationLink"
+              href="#"
+            >
+              <b>
+                Deals
+              </b>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div
+      class="navBarRight"
+    >
+      <a
+        href="/"
+      >
+        <img
+          alt="Cart logo"
+          data-nimg="1"
+          decoding="async"
+          height="20"
+          loading="lazy"
+          src="/navBar/cart.svg"
+          style="color: transparent;"
+          width="20"
+        />
+      </a>
+      <ul
+        class="navigationList"
+      >
+        <li>
+          <a
+            class="navigationLink"
+            href="#"
+          >
+            <b>
+              Log in
+            </b>
+          </a>
+        </li>
+        <li>
+          <a
+            class="navigationLink"
+            href="#"
+          >
+            <b>
+              Sign up
+            </b>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
