@@ -10,6 +10,7 @@ export const getAllProductsBasicInformation = () => {
     .then((data) => data.data.allProducts)
     .catch((error) => console.log(error));
 };
+
 export const getProductInformationById = (id: string) => {
   const query = encodeURIComponent(
     `{Product(id:"${id}"){name,description,rating,reviews,sizeOptions,quantityOptions}}`
