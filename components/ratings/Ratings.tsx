@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Ratings.module.css";
-import StarDisplay from "./star/StarDisplay";
+import StarDisplay from "./star-display/StarDisplay";
 
 type RatingsProps = {
   titleStyle?: "huge" | "normal";
