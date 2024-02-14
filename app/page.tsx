@@ -22,8 +22,8 @@ export default function Home() {
           <Ratings
             title={'Custom stickers'}
             titleStyle="huge"
-            rating={4.5}
-            reviews={20000}
+            rating={4.8}
+            reviews={155761}
           />
         </div>
       </div>
