@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Ratings.module.css";
-import StarDisplay from "./StarDisplay";
+import StarDisplay from "./star/StarDisplay";
 
 type RatingsProps = {
   titleStyle?: "huge" | "normal";
@@ -31,7 +31,7 @@ export default function Ratings(props: RatingsProps) {
         <p className={titleClassName}>{title}</p>
       </div>
       <div className={reviewContainerClassName}>
-        <StarDisplay rating={rating} maxRating={5} />
+        <StarDisplay rating={rating} />
         <p>{ratingsText}</p>
       </div>
     </div>
