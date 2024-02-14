@@ -156,13 +156,13 @@ exports[`StarDisplay component when rendering a rating with .3 as decimal part s
       width="17"
     />
     <img
-      alt="Empty star"
+      alt="Half star"
       class="starItem"
       data-nimg="1"
       decoding="async"
       height="17"
       loading="lazy"
-      src="/ratings/empty-star.svg"
+      src="/ratings/half-star.svg"
       style="color: transparent;"
       width="17"
     />
@@ -238,17 +238,6 @@ exports[`StarDisplay component when rendering a rating with .5 as decimal part s
       height="17"
       loading="lazy"
       src="/ratings/half-star.svg"
-      style="color: transparent;"
-      width="17"
-    />
-    <img
-      alt="Empty star"
-      class="starItem"
-      data-nimg="1"
-      decoding="async"
-      height="17"
-      loading="lazy"
-      src="/ratings/empty-star.svg"
       style="color: transparent;"
       width="17"
     />
