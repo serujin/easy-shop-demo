@@ -1,12 +1,12 @@
 "use client";
-import ProductInfo from "@/components/product/product-info/ProductInfo";
 import { usePathname } from "next/navigation";
-import ProductConfiguration from "@/components/product/ProductConfiguration";
-import { ProductSizeOptionType } from "@/components/product/configurationOptions/ProductSizeOption";
-import { ProductQuantityOptionType } from "@/components/product/configurationOptions/ProductQuantityOption";
+import ProductConfiguration from "@/components/product/config/ProductConfiguration";
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import { getProductInformationById } from "@/lib/products";
+import { ProductQuantityOptionType } from "@/components/product/config/config-option/quantity/ProductQuantityOption";
+import { ProductSizeOptionType } from "@/components/product/config/config-option/size/ProductSizeOption";
+import ProductInfo from "@/components/product/info/ProductInfo";
 
 type ProductInformation = {
   description: string;

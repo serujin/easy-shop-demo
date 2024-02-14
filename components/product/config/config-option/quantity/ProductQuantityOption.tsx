@@ -14,10 +14,27 @@ type ProductQuantityOptionProps = ProductQuantityOptionType & {
   selectedQuantity: string;
 };
 
-const createId = (optionNumber: number, value: string) => {
+const getId = (optionNumber: number, value: string) => {
   const valueId = value.toLowerCase().replace(" ", "-");
   return `quantity-${valueId}-${optionNumber}`;
 };
+
+const getDiscountLabel = (discount?: number) =>
+  discount ? `Save ${discount}%` : "";
+
+const getPriceLabel = (price?: Amount) =>
+  price ? `${price.quantity}${price.currency}` : "";
+
+const getValueTableCell = (isLast: boolean, id: string, value: string) =>
+  isLast ? (
+    <td colSpan={3}>
+      <label htmlFor={id}>{value}</label>
+    </td>
+  ) : (
+    <td>
+      <label htmlFor={id}>{value}</label>
+    </td>
+  );
 
 export default function ProductQuantityOption(
   props: ProductQuantityOptionProps
@@ -32,9 +49,9 @@ export default function ProductQuantityOption(
     isLast = false,
   } = props;
 
-  const id = createId(optionNumber, value);
-  const discountLabel = discount ? `Save ${discount}%` : "";
-  const priceLabelText = price ? `${price.quantity}${price.currency}` : "";
+  const id = getId(optionNumber, value);
+  const discountLabel = getDiscountLabel(discount);
+  const priceLabelText = getPriceLabel(price);
 
   return (
     <tr className={styles.quantityRow}>
@@ -48,16 +65,7 @@ export default function ProductQuantityOption(
           onChange={handleQuantityChange}
         />
       </td>
-      {isLast && (
-        <td colSpan={3}>
-          <label htmlFor={id}>{value}</label>
-        </td>
-      )}
-      {!isLast && (
-        <td>
-          <label htmlFor={id}>{value}</label>
-        </td>
-      )}
+      {getValueTableCell(isLast, id, value)}
       {price && (
         <td className={styles.rightAlign}>
           <label htmlFor={id}>{priceLabelText}</label>

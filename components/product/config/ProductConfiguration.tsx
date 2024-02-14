@@ -1,11 +1,11 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import styles from "./ProductConfiguration.module.css";
 import ProductSizeOption, {
   ProductSizeOptionType,
-} from "./configurationOptions/ProductSizeOption";
+} from "./config-option/size/ProductSizeOption";
 import ProductQuantityOption, {
   ProductQuantityOptionType,
-} from "./configurationOptions/ProductQuantityOption";
-import styles from "./ProductConfiguration.module.css";
+} from "./config-option/quantity/ProductQuantityOption";
 
 type ProductConfigurationProps = {
   sizeOptions: Array<ProductSizeOptionType>;
