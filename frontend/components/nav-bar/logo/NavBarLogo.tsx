@@ -18,8 +18,9 @@ export default function NavBarLogo(props: NavBarLogoProps) {
       <Image
         alt={imageAlt}
         src={imageUrl}
-        width={LOGO_SIZE}
-        height={LOGO_SIZE}
+        width={LOGO_SIZE || 20}
+        height={LOGO_SIZE || 20}
+        priority
       />
     </Link>
   )

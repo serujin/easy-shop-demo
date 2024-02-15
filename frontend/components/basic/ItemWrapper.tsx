@@ -10,7 +10,8 @@ type ItemWrapperProps = {
   title: string
 }
 
-const IMAGE_SIZE = 200
+const IMAGE_WIDTH = 200
+const IMAGE_HEIGHT = 170
 
 export default function ItemWrapper(props: ItemWrapperProps) {
   const { href, imgAlt, imgSrc, title } = props
@@ -19,11 +20,15 @@ export default function ItemWrapper(props: ItemWrapperProps) {
       <Link href={href}>
         <div className={styles.itemContainer}>
           <Image
-            className={styles.itemImage}
             src={imgSrc}
             alt={imgAlt}
-            width={IMAGE_SIZE}
-            height={IMAGE_SIZE}
+            width={IMAGE_WIDTH || 200}
+            height={IMAGE_HEIGHT || 170}
+            style={{
+              width: IMAGE_WIDTH || 200,
+              height: IMAGE_HEIGHT || 170,
+            }}
+            priority
           />
           <p className={styles.itemTitle}>{title}</p>
         </div>

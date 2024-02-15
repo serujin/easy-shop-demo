@@ -18,8 +18,9 @@ export default function Star(props: StarProps) {
       className={styles.starItem}
       src={imageUrl}
       alt={imageAlt}
-      width={STAR_SIZE}
-      height={STAR_SIZE}
+      width={STAR_SIZE || 17}
+      height={STAR_SIZE || 17}
+      priority
     />
   )
 }
