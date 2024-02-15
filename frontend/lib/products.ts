@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-const baseUrl = 'http://localhost:3000/?query='
+const baseUrl = 'http://localhost:3001/?query='
 
 export const getAllProductsBasicInformation = () => {
-  const query = encodeURIComponent('{allProducts{id,name}}')
+  const query = '{allProducts{id,name}}'
   return axios
     .get(`${baseUrl}${query}`)
     .then((response) => response.data)

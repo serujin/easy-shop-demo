@@ -29,15 +29,16 @@ export default function Home() {
       </div>
       <div className={styles.productsContainer}>
         <div className={styles.productsWrapper}>
-          {products.map(({ id, name }, index) => (
-            <ItemWrapper
-              key={index}
-              href={createProductHref(id)}
-              imgAlt={name}
-              imgSrc={createProductImgSrc(id)}
-              title={name}
-            />
-          ))}
+          {products &&
+            products.map(({ id, name }, index) => (
+              <ItemWrapper
+                key={index}
+                href={createProductHref(id)}
+                imgAlt={name}
+                imgSrc={createProductImgSrc(id)}
+                title={name}
+              />
+            ))}
         </div>
       </div>
     </main>
