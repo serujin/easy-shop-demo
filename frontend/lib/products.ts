@@ -12,9 +12,7 @@ export const getAllProductsBasicInformation = () => {
 }
 
 export const getProductInformationById = (id: string) => {
-  const query = encodeURIComponent(
-    `{Product(id:"${id}"){name,description,rating,reviews,sizeOptions,quantityOptions}}`,
-  )
+  const query = `{Product(id:"${id}"){name,description,rating,reviews,sizeOptions,quantityOptions}}`
   return axios
     .get(`${baseUrl}${query}`)
     .then((response) => response.data)
