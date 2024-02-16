@@ -21,10 +21,10 @@ Simple `npm` package to run a website using [NextJS] and [NodeJS].
 - Create docker network `docker network create easy-shop-demo-network` in case it doesn't exist already
 - Development:
   - Run `docker build --tag easy-shop-demo-frontend:dev-latest . -f ./dev.Dockerfile`
-  - Run `docker run -d -p "3000:3000" --name "easy-shop-demo-frontend" --network "easy-shop-demo-network" easy-shop-demo-frontend:dev-latest`
-- Development:
+  - Run `docker run -d -p "3000:3000" --name "easy-shop-demo-frontend-development" --network "easy-shop-demo-network" easy-shop-demo-frontend:dev-latest`
+- Production:
   - Run `docker build --tag easy-shop-demo-frontend:prod-latest . -f ./prod.Dockerfile`
-  - Run `docker run -d -p "3000:3000" --name "easy-shop-demo-frontend" --network "easy-shop-demo-network" easy-shop-demo-frontend:prod-latest`
+  - Run `docker run -d -p "3000:3000" --name "easy-shop-demo-frontend-production" --network "easy-shop-demo-network" easy-shop-demo-frontend:prod-latest`
 - Go to http://localhost:3000/
 
 [Axios]: https://axios-http.com/
