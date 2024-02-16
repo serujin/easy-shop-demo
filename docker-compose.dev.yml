@@ -1,32 +1,37 @@
 version: '3'
-
+name: easy-shop-demo-development
 services:
   backend:
-    container_name: easy-shop-demo-backend
-    build: ./backend
+    container_name: easy-shop-demo-backend-development
+    build:
+      context: ./backend
+      dockerfile: dev.Dockerfile
+    image: easy-shop-demo-backend-development:latest
     volumes:
       - ./backend/database.json:/app/database.json
     restart: always
     networks:
-      - easy-shop-demo-network
+      - easy-shop-demo-network-development
     ports:
       - "3001:3000"
   frontend:
-    container_name: easy-shop-demo-frontend
+    container_name: easy-shop-demo-frontend-development
     build:
       context: ./frontend
       dockerfile: dev.Dockerfile
+    image: easy-shop-demo-frontend-development:latest
     volumes:
       - ./frontend/app:/app/app
       - ./frontend/components:/app/components/
       - ./frontend/lib:/app/lib/
       - ./frontend/models:/app/models/
       - ./frontend/public:/app/public/
+      - ./frontend/styles:/app/styles/
     restart: always
     networks:
-      - easy-shop-demo-network
+      - easy-shop-demo-network-development
     ports:
       - "3000:3000"
 networks:
-  easy-shop-demo-network:
+  easy-shop-demo-network-development:
   
