@@ -13,7 +13,7 @@ export default function Home() {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    getAllProductsBasicInformation().then((products) => setProducts(products))
+    getAllProductsBasicInformation().then(products => setProducts(products))
   }, [])
 
   if (!products) {

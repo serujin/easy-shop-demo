@@ -1,8 +1,9 @@
 # easy-shop-demo/frontend
 
-Simple ```npm``` package to run a website using [NextJS] and [NodeJS].
+Simple `npm` package to run a website using [NextJS] and [NodeJS].
 
 ## What does it include?
+
 - [Axios]
 - [Development Environment]
 - [Docker]
@@ -15,14 +16,15 @@ Simple ```npm``` package to run a website using [NextJS] and [NodeJS].
 - [Typescript]
 
 ## Quick start
--  Start [Docker daemon] in your system.
-- Create docker network ```docker network create easy-shop-demo-network``` in case it doesn't exist already
+
+- Start [Docker daemon] in your system.
+- Create docker network `docker network create easy-shop-demo-network` in case it doesn't exist already
 - Development:
-    - Run ```docker build --tag easy-shop-demo-frontend:dev-latest . -f ./dev.Dockerfile```
-    - Run ```docker run -d -p "3000:3000" --name "easy-shop-demo-frontend" --network "easy-shop-demo-network" easy-shop-demo-frontend:dev-latest```
+  - Run `docker build --tag easy-shop-demo-frontend:dev-latest . -f ./dev.Dockerfile`
+  - Run `docker run -d -p "3000:3000" --name "easy-shop-demo-frontend" --network "easy-shop-demo-network" easy-shop-demo-frontend:dev-latest`
 - Development:
-    - Run ```docker build --tag easy-shop-demo-frontend:prod-latest . -f ./prod.Dockerfile```
-    - Run ```docker run -d -p "3000:3000" --name "easy-shop-demo-frontend" --network "easy-shop-demo-network" easy-shop-demo-frontend:prod-latest```
+  - Run `docker build --tag easy-shop-demo-frontend:prod-latest . -f ./prod.Dockerfile`
+  - Run `docker run -d -p "3000:3000" --name "easy-shop-demo-frontend" --network "easy-shop-demo-network" easy-shop-demo-frontend:prod-latest`
 - Go to http://localhost:3000/
 
 [Axios]: https://axios-http.com/

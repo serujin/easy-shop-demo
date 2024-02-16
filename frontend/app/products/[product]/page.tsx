@@ -29,7 +29,7 @@ export default function Product() {
 
   useEffect(() => {
     getProductInformationById(productId ? productId : '').then(
-      (ProductInformation) => setProductData(ProductInformation),
+      ProductInformation => setProductData(ProductInformation),
     )
   }, [productId])
 
