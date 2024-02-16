@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the root path should response the correct data 1`] = `
+{
+  "Product": {
+    "description": "Custom die cut stickers are a fast and easy way to promote your business, brand or event. Thick, durable vinyl protects your stickers from scratches, water & sunlight.",
+    "name": "Die cut stickers",
+    "quantityOptions": [
+      {
+        "price": {
+          "currency": "$",
+          "quantity": 60,
+        },
+        "value": "50",
+      },
+      {
+        "discount": 39,
+        "price": {
+          "currency": "$",
+          "quantity": 73,
+        },
+        "value": "100",
+      },
+      {
+        "discount": 60,
+        "price": {
+          "currency": "$",
+          "quantity": 95,
+        },
+        "value": "200",
+      },
+      {
+        "discount": 68,
+        "price": {
+          "currency": "$",
+          "quantity": 115,
+        },
+        "value": "300",
+      },
+      {
+        "discount": 75,
+        "price": {
+          "currency": "$",
+          "quantity": 152,
+        },
+        "value": "500",
+      },
+      {
+        "discount": 81,
+        "price": {
+          "currency": "$",
+          "quantity": 232,
+        },
+        "value": "1000",
+      },
+      {
+        "discount": 85,
+        "price": {
+          "currency": "$",
+          "quantity": 371,
+        },
+        "value": "2000",
+      },
+      {
+        "discount": 86,
+        "price": {
+          "currency": "$",
+          "quantity": 496,
+        },
+        "value": "3000",
+      },
+      {
+        "discount": 88,
+        "price": {
+          "currency": "$",
+          "quantity": 723,
+        },
+        "value": "5000",
+      },
+      {
+        "discount": 90,
+        "price": {
+          "currency": "$",
+          "quantity": 1225,
+        },
+        "value": "10000",
+      },
+    ],
+    "rating": 4.5,
+    "reviews": 76746,
+    "sizeOptions": [
+      {
+        "value": "2″ x 2″",
+      },
+      {
+        "value": "3″ x 3″",
+      },
+      {
+        "value": "4″ x 4″",
+      },
+      {
+        "value": "5″ x 5″",
+      },
+    ],
+  },
+}
+`;
