@@ -19,6 +19,9 @@ type ProductInformation = {
   sizeOptions: ProductSizeOptionType[]
 }
 
+const shouldRenderProductPage = (productData: ProductInformation) =>
+  !!productData.name
+
 export default function Product() {
   const [productData, setProductData] = useState({} as ProductInformation)
 
@@ -45,31 +48,33 @@ export default function Product() {
   } = productData
 
   return (
-    <main
-      className={styles.main}
-      style={{
-        backgroundImage: `url(/products/${productId}/background.webp)`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center center',
-      }}
-    >
-      <div className={styles.mainContainer}>
-        <div className={styles.productInfoContainer}>
-          <ProductInfo
-            description={description}
-            name={name}
-            rating={rating}
-            reviews={reviews}
-            samplesAvailable={samplesAvailable}
-          />
+    shouldRenderProductPage(productData) && (
+      <main
+        className={styles.main}
+        style={{
+          backgroundImage: `url(/products/${productId}/background.webp)`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+        }}
+      >
+        <div className={styles.mainContainer}>
+          <div className={styles.productInfoContainer}>
+            <ProductInfo
+              description={description}
+              name={name}
+              rating={rating}
+              reviews={reviews}
+              samplesAvailable={samplesAvailable}
+            />
+          </div>
+          <div className={styles.productConfigContainer}>
+            <ProductConfiguration
+              quantityOptions={quantityOptions}
+              sizeOptions={sizeOptions}
+            />
+          </div>
         </div>
-        <div className={styles.productConfigContainer}>
-          <ProductConfiguration
-            quantityOptions={quantityOptions}
-            sizeOptions={sizeOptions}
-          />
-        </div>
-      </div>
-    </main>
+      </main>
+    )
   )
 }
