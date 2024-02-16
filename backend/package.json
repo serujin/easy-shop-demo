@@ -1,19 +1,26 @@
 {
   "name": "easy-shop-demo-backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "node index.js"
+    "dev": "concurrently --kill-others --names \"BUILD-TASK,APPLICATION\" -c \"bgYellow.bold,bgBlue.bold\" \"npm run build:watch\" \"nodemon dist/main.js\"",
+    "build": "tsup src/main.ts",
+    "build:watch": "tsup src/main.ts --watch",
+    "start": "node dist/main.js"
   },
-  "devDependencies": {
-    "json-graphql-server": "^2.3.2"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.4",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.19",
+    "concurrently": "^8.2.2",
+    "json-graphql-server": "^2.3.2",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
   },
   "type": "commonjs"
 }
