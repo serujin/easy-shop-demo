@@ -7,6 +7,7 @@ import { getProductInformationById } from '@/lib/products'
 import { ProductQuantityOptionType } from '@/components/product/config/config-option/quantity/ProductQuantityOption'
 import { ProductSizeOptionType } from '@/components/product/config/config-option/size/ProductSizeOption'
 import ProductInfo from '@/components/product/info/ProductInfo'
+import NotFound from '@/components/basic/not-found/NotFound'
 
 type ProductInformation = {
   description: string
@@ -23,6 +24,16 @@ export default function Product() {
 
   const productId = usePathname()?.split('/').at(-1) ?? ''
 
+  useEffect(() => {
+    getProductInformationById(productId ? productId : '').then(
+      (ProductInformation) => setProductData(ProductInformation),
+    )
+  }, [productId])
+
+  if (!productData) {
+    return <NotFound />
+  }
+
   const {
     description,
     name,
@@ -32,12 +43,6 @@ export default function Product() {
     samplesAvailable,
     sizeOptions,
   } = productData
-
-  useEffect(() => {
-    getProductInformationById(productId ? productId : '').then(
-      (ProductInformation) => setProductData(ProductInformation),
-    )
-  }, [productId])
 
   return (
     <main
