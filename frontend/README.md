@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# easy-shop-demo/frontend
 
-## Getting Started
+Simple ```npm``` package to run a website using [NextJS] and [NodeJS].
 
-First, run the development server:
+## What does it include?
+- [Axios]
+- [Development Environment]
+- [Docker]
+- [Eslint]
+- [Jest]
+- [NextJS]
+- [Prettier]
+- [Production Environment]
+- [React]
+- [Typescript]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Quick start
+-  Start [Docker daemon] in your system.
+- Create docker network ```docker network create easy-shop-demo-network``` in case it doesn't exist already
+- Development:
+    - Run ```docker build --tag easy-shop-demo-frontend:dev-latest . -f ./dev.Dockerfile```
+    - Run ```docker run -d -p "3000:3000" --name "easy-shop-demo-frontend" --network "easy-shop-demo-network" easy-shop-demo-frontend:dev-latest```
+- Development:
+    - Run ```docker build --tag easy-shop-demo-frontend:prod-latest . -f ./prod.Dockerfile```
+    - Run ```docker run -d -p "3000:3000" --name "easy-shop-demo-frontend" --network "easy-shop-demo-network" easy-shop-demo-frontend:prod-latest```
+- Go to http://localhost:3000/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Axios]: https://axios-http.com/
+[Development Environment]: ./dev.Dockerfile
+[Docker]: https://www.docker.com/
+[Docker daemon]: https://docs.docker.com/config/daemon/start/
+[Eslint]: https://eslint.org/
+[Jest]: https://jestjs.io/
+[NextJS]: https://nextjs.org/
+[NodeJS]: https://nodejs.org/en
+[Prettier]: https://prettier.io/
+[Production Environment]: ./prod.Dockerfile
+[React]: https://react.dev/
+[Typescript]: https://www.typescriptlang.org/
