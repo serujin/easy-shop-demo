@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently --kill-others --names \"BUILD-TASK,APPLICATION\" -c \"bgYellow.bold,bgBlue.bold\" \"npm run build:watch\" \"nodemon dist/main.js\"",
     "build": "tsup src/main.ts",
     "build:watch": "tsup src/main.ts --watch",
+    "dev": "concurrently --kill-others --names \"BUILD-TASK,APPLICATION\" -c \"bgYellow.bold,bgBlue.bold\" \"npm run build:watch\" \"nodemon dist/main.js\"",
+    "lint": "eslint --ignore-path .eslintignore --ext .ts",
     "start": "node dist/main.js"
   },
   "dependencies": {
@@ -17,7 +18,10 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
     "concurrently": "^8.2.2",
+    "eslint": "^8.56.0",
     "json-graphql-server": "^2.3.2",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
