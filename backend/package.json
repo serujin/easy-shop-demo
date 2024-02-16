@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "tsup src/main.ts",
-    "build:watch": "tsup src/main.ts --watch",
-    "dev": "concurrently --kill-others --names \"BUILD-TASK,APPLICATION\" -c \"bgYellow.bold,bgBlue.bold\" \"npm run build:watch\" \"nodemon dist/main.js\"",
+    "build": "tsup src/main.ts --minify",
+    "dev": "concurrently --kill-others --names \"APPLICATION,BUILD-TASK\" -c \"bgBlue.bold,bgYellow.bold\" \"nodemon dist/main.js\" \"tsup src/main.ts --watch\"",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|json)\"",
     "lint": "eslint --ignore-path .gitignore --ext .ts",
     "start": "node dist/main.js",
