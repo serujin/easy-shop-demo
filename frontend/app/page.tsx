@@ -3,7 +3,7 @@ import ItemWrapper from '@/components/basic/ItemWrapper'
 import Ratings from '@/components/ratings/Ratings'
 import { useEffect, useState } from 'react'
 import { getAllProductsBasicInformation } from '@/lib/products'
-import styles from './page.module.css'
+import styles from '@/styles/custom-stickers-page.module.css'
 
 const createProductHref = (id: string) => `/products/${id}`
 const createProductImgSrc = (id: string) => `/products/${id}/icon.webp`

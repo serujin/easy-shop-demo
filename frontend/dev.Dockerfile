@@ -11,8 +11,9 @@ COPY app ./app
 COPY components ./components
 COPY lib ./lib
 COPY models ./models
-COPY public ./public
 COPY next.config.mjs .
+COPY public ./public
+COPY styles ./styles
 COPY tsconfig.json .
 
 ENV NEXT_TELEMETRY_DISABLED 1

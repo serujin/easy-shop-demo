@@ -1,7 +1,7 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import ProductConfiguration from '@/components/product/config/ProductConfiguration'
-import styles from './page.module.css'
+import styles from '@/styles/product-page.module.css'
 import { useEffect, useState } from 'react'
 import { getProductInformationById } from '@/lib/products'
 import { ProductQuantityOptionType } from '@/components/product/config/config-option/quantity/ProductQuantityOption'
