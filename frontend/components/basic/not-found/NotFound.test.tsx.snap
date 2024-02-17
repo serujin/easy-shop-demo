@@ -1,6 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home page should render correctly 1`] = `
+exports[`NotFound component should render correctly with is404 prop 1`] = `
+<div>
+  <main
+    class="main"
+  >
+    <div
+      class="notFoundProductContainer"
+    >
+      <p
+        class="notFoundText"
+      >
+        Oops, the page you are trying to reach doesn't exist
+      </p>
+      <p
+        class="notFoundText"
+      >
+        Sorry for the inconveniences
+      </p>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`NotFound component should render correctly with isIndex prop 1`] = `
 <div>
   <main
     class="main"
@@ -93,11 +116,41 @@ exports[`Home page should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="productsContainer"
+      class="notFoundIndexContainer"
     >
-      <div
-        class="productsWrapper"
-      />
+      <p
+        class="notFoundText"
+      >
+        We could not load any product right now, try again later
+      </p>
+      <p
+        class="notFoundText"
+      >
+        Sorry for the inconveniences
+      </p>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`NotFound component should render correctly without props 1`] = `
+<div>
+  <main
+    class="main"
+  >
+    <div
+      class="notFoundProductContainer"
+    >
+      <p
+        class="notFoundText"
+      >
+        We could not load any product information right now, try again later
+      </p>
+      <p
+        class="notFoundText"
+      >
+        Sorry for the inconveniences
+      </p>
     </div>
   </main>
 </div>
