@@ -4,10 +4,11 @@ import styles from './NotFound.module.css'
 
 type NotFoundProps = {
   isIndex?: boolean
+  is404?: boolean
 }
 
-const getHeader = (isIndex: boolean) => {
-  if (!isIndex) {
+const getHeader = (isIndex: boolean, is404: boolean) => {
+  if (!isIndex || is404) {
     return
   }
   return (
@@ -24,21 +25,24 @@ const getHeader = (isIndex: boolean) => {
   )
 }
 
-const getNotFoundText = (isIndex: boolean) => {
+const getNotFoundText = (isIndex: boolean, is404: boolean) => {
+  if (is404) {
+    return "Oops, the page you are trying to reach doesn't exist"
+  }
   const pageText = isIndex ? 'product' : 'product information'
   return `We could not load any ${pageText} right now, try again later`
 }
 
 export default function NotFound(props: NotFoundProps) {
-  const { isIndex = false } = props
+  const { isIndex = false, is404 = false } = props
   const containerClassName = isIndex
     ? styles.notFoundIndexContainer
     : styles.notFoundProductContainer
   return (
     <main className={customStickersStyles.main}>
-      {getHeader(isIndex)}
+      {getHeader(isIndex, is404)}
       <div className={containerClassName}>
-        <p className={styles.notFoundText}>{getNotFoundText(isIndex)}</p>
+        <p className={styles.notFoundText}>{getNotFoundText(isIndex, is404)}</p>
         <p className={styles.notFoundText}>Sorry for the inconveniences</p>
       </div>
     </main>
